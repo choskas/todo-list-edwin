@@ -50,7 +50,7 @@ app.use(limiter);
 // Routes
 app.use(require("./routes/index"));
 
-// Static
+// Static s
 app.use(express.static(path.join(__dirname, "public")));
 
 // Listen server
