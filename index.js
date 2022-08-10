@@ -16,10 +16,9 @@ app.disable("x-powered-by");
 app.use(bodyParser.json());
 app.use(
   cors({
-    credentials: false,
-    origin: [
-      "*"
-    ],
+    credentials: true,
+    origin: ['http://localhost:3000', 'http://localhost:5000', 'http://localhost:5500'],
+    methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
   })
 );
 
