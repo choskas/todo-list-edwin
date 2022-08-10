@@ -9,7 +9,9 @@ const mongoose = require("mongoose");
 const app = express();
 
 // Middlewares
-app.use(helmet());
+app.use(helmet({
+  crossOriginEmbedderPolicy: false,
+}));
 app.disable("x-powered-by");
 app.use(bodyParser.json());
 app.use(
